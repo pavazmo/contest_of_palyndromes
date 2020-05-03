@@ -14,14 +14,14 @@ app.controller('GameController', function($scope, GameService) {
 				$scope.word = undefined;
 				GameService.getScores()
 					.success(function(scores) {
-						$scope.scores = scores;
-					});
-			});
+						$scope.scores = scores.scores;
+					})
+			})
 	};
 
 	GameService.getScores()
 		.success(function(scores) {
-			$scope.scores = scores;
+			$scope.scores = scores.scores;
 		});
 });
 

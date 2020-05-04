@@ -23,11 +23,9 @@ function getScore(req, res) {
 async function postScore(req, res) {
     let word = req.body.word;
     if (!isPalindrome(word)){
-      //resp.error400("error palindromo", res);
       res.status(400).json({
         message: "error palindromo"
-        });
-
+      });
     }
 
     let score = { 
@@ -48,7 +46,6 @@ async function postScore(req, res) {
         return a.points - b.points;
     });
 
-    console.log(scores)
     res.status(200).json({
         scores
     });

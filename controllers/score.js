@@ -7,11 +7,11 @@ function calculateScore(word){
     return word.length;
 }
 
-function isPalindrome(str) {
+function isPalindrome(word) {
     let re = /[\W_]/g;
-    let lowRegStr = str.toLowerCase().replace(re, '');
-    let reverseStr = lowRegStr.split('').reverse().join(''); 
-    return reverseStr === lowRegStr;
+    let lowRegWord = word.toLowerCase().replace(re, '');
+    let reverseWord = lowRegWord.split('').reverse().join(''); 
+    return reverseWord === lowRegWord;
 }
 
 function getScore(req, res) {
